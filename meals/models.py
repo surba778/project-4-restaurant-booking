@@ -12,6 +12,8 @@ class meals(models.Model):
     image = models.ImageField(upload_to="")
     slug = models.SlugField(null=True, blank=True)
 
+   
+
     class Meta:
         verbose_name = 'meal'
         verbose_name_plural = 'meals'

@@ -1,7 +1,8 @@
-<h1>Meals List</h1>
+{% extends 'base.html' %}
+
+{% block body %}
 
 
-{% for meal in meals_list %}
-    <h2><a href="{%url 'meals:meal_detail' meal.slug %}"> {{meals}} </a></h2>
-{% endfor %}
+
+{% endblock body %}
 
