@@ -1,13 +1,23 @@
 from django.db import models
+from django.utils import timezone
+
+now = timezone.now()
+
 
 # Create your models here.
 
 class Reservation(models.Model):
+
+    class Meta:
+        unique_together = [['table', 'date']]
+        
     name = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.IntegerField()
     number_of_persons = models.IntegerField()
-    Date = models.DateField()
+    table = models.IntegerField()
+    date = models.DateTimeField(auto_now_add=True, blank=True)
+
 
     def __str__(self):
         return self.name
