@@ -4,5 +4,5 @@ from . import views
 app_name = 'reservation'
 
 urlpatterns = [
-    path('',views.booking_table, name='booking_table'),
+    path('',views.book_table, name='book_table'),
 ]
