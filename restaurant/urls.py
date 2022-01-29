@@ -20,10 +20,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', include('about.urls')),
-    path('home/', include('home.urls')),
+    path('', include('home.urls')),
     path('menu/', include('menu.urls')),
-    path('reserve_table/', include('reservation.urls')),
+    path('about/', include('about.urls')),
+    path('book_table/', include('reservation.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

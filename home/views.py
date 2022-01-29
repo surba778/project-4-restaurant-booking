@@ -8,12 +8,10 @@ def home(request):
 
     menu = Menu.objects.all()
     we_are_feane = We_Are_Feane.objects.all()
-
-
     
     context = {
-        'menu' : menu ,
-        'we_are_feane' : we_are_feane , 
+        'menu': menu,
+        'we_are_feane': we_are_feane,
     }
 
-    return render(request , 'home/index.html' , context)
+    return render(request, 'home/index.html',)

@@ -1,21 +1,18 @@
-from django.template import context
 from .models import Reservation
 from django.shortcuts import render
-from .forms import ReserveTableForm
+from .forms import BookTableForm
+from django.views import generic
 
 from reservation.models import Reservation
 
-def home(request):
-    return render(request, 'reservation/home.html', context)
-
 def make_reservation(request):
-    return render(request, 'reservation/book.html', context)
+    return render(request, 'reservation/book.html',)
 
-def reserve_table(request):
-    reserve_form = ReserveTableForm()
+def book_table(request):
+    reserve_form = BookTableForm()
 
     if request.method == 'POST':
-        reserve_form = ReserveTableForm(request.POST)
+        reserve_form = BookTableForm(request.POST)
 
         if reserve_form.is_valid():
             reserve_form.save()

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import  About , We_Are_Feane
+from .models import  About, We_Are_Feane
 # Create your views here.
 
 def about_list(request):
