@@ -12,8 +12,9 @@ def book_table(request):
     if request.method == 'POST':
         reserve_form = BookTableForm(request.POST)
 
-    if reserve_form.is_valid():
-            reserve_form.save()
+        if reserve_form.is_valid():
+                reserve_form.save()
+                print("SAVED")
 
     context = {'form': reserve_form}
     return render(request, 'reservation/book.html', context)

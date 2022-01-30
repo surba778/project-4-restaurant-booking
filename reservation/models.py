@@ -7,7 +7,8 @@ class Reservation(models.Model):
     email = models.EmailField()
     phone = models.IntegerField()
     number_of_persons = models.IntegerField()
-    date = models.DateTimeField(auto_now_add=True, blank=True)
+    date = models.DateField()
+    time = models.TimeField()
 
 
     def __str__(self):
