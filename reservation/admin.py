@@ -4,6 +4,6 @@ from django.contrib import admin
 from .models import Reservation
 
 class ReservationAdmin(admin.ModelAdmin):
-    list_display = ('name','phone', 'email', 'number_of_persons', 'date', 'time')
+    list_display = ('name','phone', 'email', 'number_of_persons', 'date',)
 
 admin.site.register(Reservation, ReservationAdmin)

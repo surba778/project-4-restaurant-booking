@@ -1,8 +1,8 @@
-{%extends 'base.html' %}
-
+{% extends 'base.html' %}
+{% load bootstrap4 %}
 {% load static %}
 {% block body %}
-
+  
 <!-- book section -->
 <section class="book_section layout_padding">
   <div class="container">
@@ -14,7 +14,8 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form_container">
-          <form method="" action="">
+          <form action="">
+            {% csrf_token %}
             <div>
               <input type="text" class="form-control" placeholder="Your Name" />
             </div>
@@ -52,6 +53,8 @@
               </button>
             </div>
           </form>
+
+        
         </div>
       </div>
       <div class="col-md-6">
@@ -66,3 +69,10 @@
 {% endblock body %}
 
   
+
+
+
+
+              
+
+        
