@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('menu/', include('menu.urls')),
     path('about/', include('about.urls')),
-    path('reservetable/' , include('reservation.urls')),
+    path('reserve_table/' , include('reservation.urls')),
     path("accounts/", include("allauth.urls")),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

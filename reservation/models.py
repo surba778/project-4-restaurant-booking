@@ -9,7 +9,7 @@ class Reservation(models.Model):
     phone = models.IntegerField()
     persons = models.IntegerField()
     date = models.DateField()
-    time = models.TimeField()
+    
 
 
     def __str__(self):
