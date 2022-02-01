@@ -23,8 +23,12 @@ urlpatterns = [
     path('', include('home.urls')),
     path('menu/', include('menu.urls')),
     path('about/', include('about.urls')),
-    path('book_table/', include('reservation.urls')),
+    path('reservetable/' , include('reservation.urls')),
     path("accounts/", include("allauth.urls")),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "Resturant AdminPanel"
+admin.site.site_title = "Resturant App Admin "
+admin.site.site_index_title = "Welcome To Resturant Admin Panel"

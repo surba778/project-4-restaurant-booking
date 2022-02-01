@@ -64,9 +64,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
               </li>
+              {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'book_table' %}">BookTable</a>
+                <a class="nav-link" href="{% url 'reserve_table' %}">ReserveTable</a>
               </li>
+              {% endif %}
+
+               
             </ul>
 
             
@@ -147,9 +151,7 @@
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
               </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
+              
             </div>
           </div>
         </nav>
