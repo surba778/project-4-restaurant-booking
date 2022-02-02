@@ -73,7 +73,8 @@ View the live site [here](https://booking2022.herokuapp.com/admin/) for admin (u
           - Links for account management including: 
             - ReserveTable and Logout links (for signed in users) 
             - Login and sign up links (for unsigned users)
-            ![Getting reservetable page](https://github.com/surba778/PROJECT-4-RESTAURANT-BOOKING/readme-images/Reservetable page.png)
+            ![Getting reservetable page](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/Reservetable%20page.png)
+
 
  ### Allauth features
     - The Login, sign up, Logout, signout, change email, password reset, email confirmation and other authentication related features, have been provided by Django allauth and edited to fit with the style and functionality of the website.           
