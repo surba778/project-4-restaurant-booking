@@ -70,14 +70,17 @@ View the live site [here](https://booking2022.herokuapp.com/admin/) for admin (u
 
 - ### All apps 
 
-          - Links for account management including: 
-            - ReserveTable and Logout links (for signed in users) 
-            - Login and sign up links (for unsigned users)
-            ![Getting reservetable page](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/Reservetable%20page.png)
-
+    - Links for account management including: 
+    - ReserveTable and Logout links (for signed in users) 
+    - Login and sign up links (for unsigned users)
+        ![Getting reservetable page](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/Reservetable_page.png)
+        ![Getting reservetable data page](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/reserve_table_data_fields.png)
 
  ### Allauth features
-    - The Login, sign up, Logout, signout, change email, password reset, email confirmation and other authentication related features, have been provided by Django allauth and edited to fit with the style and functionality of the website.           
+    - The Login, sign up, Logout, signout, change email, password reset, email confirmation and other authentication related features, have been provided by Django allauth and edited to fit with the style and functionality of the website.
+![Data is updated](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/Reservationlist.png)
+![Reservation editable page](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/admin_data.png)
+         
 
 
 ## Signed In Users
@@ -90,7 +93,8 @@ View the live site [here](https://booking2022.herokuapp.com/admin/) for admin (u
         - Access reservation history 
         - Add, edit and delete reservation
         - Access Django admin page: (which involves access to every database and allows to answer costumer messages)
-
+        ![Homepage](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/home_page.png)
+        ![Homepage without login](https://github.com/surba778/project-4-restaurant-booking/blob/main/readme-images/home_page_without_login.png)
 
 ## Future Prospects 
 
@@ -200,19 +204,19 @@ To clone the project up locally you can follow the following steps:
             os.environ["SECRET_KEY"] = "Your secret key"
             
 
-7. To set up the database migrate the database models by typing the following commands into the terminal: 
+6. To set up the database migrate the database models by typing the following commands into the terminal: 
     - ```
         python3 manage.py showmigrations
         python3 manage.py makemigrations
         python3 manage.py migrate
         
-8. Create a superuser to have access to the django admin dashboard type the following commands into the terminal:
+7. Create a superuser to have access to the django admin dashboard type the following commands into the terminal:
     - ```
         python3 manage.py createsuperuser
         ```
     - Then set up the account by adding your username, email and password. 
 
-9. Finally, run the app locally by typing the following command into the terminal: 
+8. Finally, run the app locally by typing the following command into the terminal: 
     - ```
         python3 manage.py runserver
         ```
@@ -256,41 +260,41 @@ To clone the project up locally you can follow the following steps:
         DATABASES = {
             'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
         ```
-9. Install Gunicorn (which will act as our webserver) by typing the following commands into the terminal:
+8. Install Gunicorn (which will act as our webserver) by typing the following commands into the terminal:
     - ```
         pip3 install gunicorn
         pip3 freeze > requirements.txt
         ```
-10. Type the following into the procfile: 
+9. Type the following into the procfile: 
     - ```
         web: gunicorn restaurant.wsgi
         ```
-11. Log in into the Heroku terminal:
+10. Log in into the Heroku terminal:
     - ```
         heroku login -i
         ```
-12. Disable collectstatic to prevent Heroku from collecting static files when deployed, by typing the following command into the terminal: 
+11. Disable collectstatic to prevent Heroku from collecting static files when deployed, by typing the following command into the terminal: 
     - ```
         heroku config:set DISABLE_COLLECTSTATIC=1 --app "heroku_app_name"
         ```
-13. In settings.py add the hostname of the Heroku app, and allow localhost: 
+12. In settings.py add the hostname of the Heroku app, and allow localhost: 
     - ```
         ALLOWED_HOSTS = ['"heroku_app_name".herokuapp.com', 'localhost']
         ```
-14. Deploy to Heroku by typing the following commands into the terminal: 
+13. Deploy to Heroku by typing the following commands into the terminal: 
     - ```
         heroku git:remote -a "heroku_app_name"
         git push heroku main
         ```
-15. To set up automatic deployments in Heroku when pushing code to github:
+14. To set up automatic deployments in Heroku when pushing code to github:
     - On the deploy tab, connect to github by searching for the repository name and clicking 'Connect'.
     - Click 'Enable Automatic Deploys" 
-16. Generate a django secret key at [Djcrety](https://djecrety.ir/) and add it to 'Settings' > 'Config variables' in Heroku.
-17. Update the settings.py file to collect the secret key from the environment, and use an empty string as default: 
+15. Generate a django secret key at [Djcrety](https://djecrety.ir/) and add it to 'Settings' > 'Config variables' in Heroku.
+16. Update the settings.py file to collect the secret key from the environment, and use an empty string as default: 
     - ```
         SECRET_KEY = os.environ.get('SECRET_KEY', '')
         ```
-18. Set debug to be true only if there's a variable called "DEVELOPMENT" in the environment. 
+17. Set debug to be true only if there's a variable called "DEVELOPMENT" in the environment. 
     - ```
         DEBUG = 'DEVELOPMENT' in os.environ
         ```
