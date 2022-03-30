@@ -9,7 +9,7 @@ This website is for educational purposes only.
 
 View the live site [here](https://booking2022.herokuapp.com/)
 
-View the live site [here](https://booking2022.herokuapp.com/admin/) for admin (username:dhivi, password:tanvi)
+View the live site [here](https://booking2022.herokuapp.com/admin/) for admin
 
 <br>
 
